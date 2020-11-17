@@ -1,0 +1,13 @@
+<view wx:if="{{currentUser}}">
+  <view>{{currentUser.nickname}}</view>
+  <image src="{{currentUser.avatar}}" class="avatar"></image>
+</view>
+
+<view wx:else>
+  <button open-type="getUserInfo" bindgetuserinfo="login">Login</button>
+</view>
+
+<view wx:for="{{orders}}" class="review-card">
+  <view>{{item.meal_id.title}}</view>
+  <view>{{item.meal_id.price}}</view>
+</view>

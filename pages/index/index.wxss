@@ -1,0 +1,42 @@
+.container {
+  /* min-height: 100vw; */
+  margin-left: 24rpx;
+  margin-right: 24rpx;
+  display: flex;
+  flex-direction: column;
+  padding-top: 24rpx;
+  /* align-items: flex-start; */
+  /* justify-content: space-around; */
+}
+
+.card {
+  overflow: hidden;
+  height: 320rpx;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20rpx;
+  border-radius: 12rpx;
+}
+.img {
+  height: 100%;
+  width: 320rpx;
+  flex-shrink: 0;
+}
+
+.card-infos {
+  padding: 16px;
+}
+
+.header {
+  font-size: 40rpx;
+  font-weight: 700;
+}
+
+.desc {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: gray;
+}

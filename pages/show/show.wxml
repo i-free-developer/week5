@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="card">
+    <image class="img" src="{{restaurant.photo}}"></image>
+    <view class="card-infos">
+      <view class="header">{{restaurant.name}}</view>
+      <view class="desc">{{restaurant.description}}</view>
+    </view>
+  </view>
+
+  <view class="review-card" wx:for="{{reviews}}">
+    <view class="review-header">{{item.content}}</view>
+    <view class="review-desc">{{item.rating}}</view>
+  </view>
+
+  <view class="review-card" wx:for="{{meals}}" wx:for-item="meal">
+    <view class="review-header">{{meal.title}}</view>
+    <view class="review-header">{{meal.price}}</view>
+    <button bindtap="createOrder" data-mealid="{{meal.id}}" >Order</button>
+  </view>
+
+  <form wx:if="{{currentUser}}" bindsubmit="createReview">
+    <view class="input">
+      <input type="text" name="content" />
+    </view>
+
+    <view class="input">
+      <picker mode="selector" range="{{ratings}}" bindchange="onRating">{{rating}}</picker>
+    </view>
+    <button form-type="submit" class="btn">Create Review</button>
+  </form>
+
+  <view wx:else>
+    <button bindtap="goToUser">Login</button>
+  </view>
+</view>
