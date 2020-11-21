@@ -13,6 +13,7 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    // refine js logics
     let currentUser = wx.getStorageSync('user')
     this.setData({currentUser: currentUser})
     console.log(options)
