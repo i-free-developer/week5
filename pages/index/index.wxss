@@ -40,3 +40,7 @@
   font-weight: 500;
   color: gray;
 }
+.upload {
+  padding: 48rpx;
+  font-size: 96rpx;
+}

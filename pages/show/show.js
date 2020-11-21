@@ -79,6 +79,12 @@ Page({
       url: '/pages/user/user',
     })
   },
+  showOnMap: function () {
+    wx.openLocation({
+      latitude: this.data.restaurant.latitude,
+      longitude: this.data.restaurant.longitude,
+    })
+  },
   /**
    * Lifecycle function--Called when page is initially rendered
    */

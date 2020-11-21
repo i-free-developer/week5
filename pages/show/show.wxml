@@ -6,7 +6,9 @@
       <view class="header">{{restaurant.name}}</view>
       <view class="desc">{{restaurant.description}}</view>
     </view>
+    <button bindtap="showOnMap">Open on Map</button>
   </view>
+
 
   <view class="review-card" wx:for="{{reviews}}">
     <view class="review-header">{{item.content}}</view>

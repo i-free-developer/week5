@@ -1,10 +1,19 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="card" wx:for="{{restaurants}}" wx:key="{{item.id}}" bindtap="goToRestaurant" data-id="{{item.id}}">
+<block wx:for="{{restaurants}}" wx:key="{{item.id}}">
+  <view class="card" bindtap="goToRestaurant" data-id="{{item.id}}">
     <image class="img" src="{{item.photo}}"></image>
     <view class="card-infos">
       <view class="header">{{item.name}}</view>
       <view class="desc">{{item.description}}</view>
+      <view>{{item.address}}</view>
+      <!-- <view>{{item.latitude}}</view> -->
     </view>
   </view>
+</block>
+  <view>Address: {{address}}</view>
+  <!-- <button bindtap="takePhoto" class="upload">+</button> -->
+  <button bindtap="phoneCall" class="upload">Call</button>
+  <button bindtap="chooseLocation" class="upload">+</button>
+  <button bindtap="vibrate">Vibrate</button>
 </view>
